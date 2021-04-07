@@ -1,0 +1,15 @@
+﻿@model RoomsApplication.Models.GetRoomViewModel
+
+@{
+    ViewBag.Title = "Rooms";
+}
+
+<h2>This is all rooms we have:</h2>
+
+<ul>
+    @foreach (var room in Model.Rooms)
+    {
+        <li>ID: @room.Id Color: @room.Color</li>
+    }
+</ul>
+

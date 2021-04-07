@@ -1,0 +1,26 @@
+﻿@model RoomsApplication.Models.RoomViewModel
+
+@{
+    ViewBag.Title = "Create";
+}
+@using (Html.BeginForm("Create", "Rooms", FormMethod.Post))
+{
+    <h1>This is Create Room Page</h1>
+    <br />
+    <div>
+        @Html.LabelFor(x => x.Color)
+    </div>
+    <div>
+        @Html.TextBoxFor(x => x.Color)
+    </div>
+    <br />
+    <div>
+        @Html.LabelFor(x => x.MaxHumanCount)
+    </div>
+    <div>
+        @Html.TextBoxFor(x => x.MaxHumanCount)
+    </div>
+    <br />
+    <input type="submit" value="Отправить" />
+}
+

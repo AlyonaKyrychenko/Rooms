@@ -1,0 +1,33 @@
+﻿@model RoomsApplication.Models.HumanViewModel
+
+@{
+    ViewBag.Title = "Create";
+}
+@using (Html.BeginForm("Create", "Humans", FormMethod.Post))
+{
+    <h1>This is Create Human Page</h1>
+    <br />
+    <div>
+        @Html.LabelFor(x => x.Name)
+    </div>
+    <div>
+        @Html.TextBoxFor(x => x.Name)
+    </div>
+    <br />
+    <div>
+        @Html.LabelFor(x => x.PhoneNumber)
+    </div>
+    <div>
+        @Html.TextBoxFor(x => x.PhoneNumber)
+    </div>
+    <br />
+    <div>
+        @Html.LabelFor(x => x.RoomId)
+    </div>
+    <div>
+        @Html.TextBoxFor(x => x.RoomId)
+    </div>
+    <br />
+    <input type="submit" value="Отправить" />
+}
+

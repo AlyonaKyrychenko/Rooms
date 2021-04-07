@@ -1,0 +1,13 @@
+﻿@model RoomsApplication.Models.GetHumanViewModel
+
+@{
+    ViewBag.Title = "GetAll";
+}
+<h2>This is all humans:</h2>
+
+<ul>
+    @foreach (var human in Model.Humans)
+    {
+        <li>ID: @human.Id, Name: @human.Name, Phone number: @human.PhoneNumber</li>
+    }
+</ul>
