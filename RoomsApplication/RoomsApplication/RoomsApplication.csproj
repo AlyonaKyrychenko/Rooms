@@ -182,7 +182,6 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\GetHumanViewModel.cs" />
     <Compile Include="Models\GetRoomViewModel.cs" />
-    <Compile Include="Models\HumansToRoomsViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\HumanPostModel.cs" />
@@ -251,7 +250,7 @@
     <Content Include="Views\Humans\Create.cshtml" />
     <Content Include="Views\Rooms\Create.cshtml" />
     <Content Include="Views\Rooms\GetAll.cshtml" />
-    <Content Include="Views\Humans\AddHumanToRoom.cshtml" />
+    <Content Include="Views\Humans\Update.cshtml" />
     <Content Include="Views\Humans\GetHumanByRoomId.cshtml" />
     <Content Include="Views\Humans\GetAll.cshtml" />
   </ItemGroup>

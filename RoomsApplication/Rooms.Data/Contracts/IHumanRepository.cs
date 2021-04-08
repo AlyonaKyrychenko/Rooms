@@ -10,7 +10,7 @@ namespace Rooms.Data.Contracts
     public interface IHumanRepository
     {
         void Create(Human model);
-        void AddHumanToRoom(int roomId, int humanId);
+        void Update(int id, Human model);
         IReadOnlyCollection<Human> GetHumanByRoomId(int id);
         IReadOnlyCollection<Human> GetAll();
     }

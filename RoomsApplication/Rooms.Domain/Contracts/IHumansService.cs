@@ -10,7 +10,7 @@ namespace Rooms.Domain.Contracts
     public interface IHumansService
     {
         void Create(HumanModel model);
-        void AddHumanToRoom(int roomId, int humanId);
+        void Update(int id, HumanModel model);
         IReadOnlyCollection<HumanModel> GetHumanByRoomId(int id);
         IReadOnlyCollection<HumanModel> GetAll();
     }

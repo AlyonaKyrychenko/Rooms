@@ -20,13 +20,15 @@ namespace Rooms.Data.Repositories
             }
         }
 
-        public void AddHumanToRoom(int roomId, int humanId)
+        public void Update(int id, Human model)
         {
             using (var ctx = new RoomsContext())
             {
-                var human = ctx.Humans.First(x => x.Id == humanId);
+                var human = ctx.Humans.First(x => x.Id == id);
 
-                human.RoomId = roomId;
+                human.Name = model.Name;
+                human.PhoneNumber = model.PhoneNumber;
+                human.RoomId = model.RoomId;
 
                 ctx.SaveChanges();
             }
