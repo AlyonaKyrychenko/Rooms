@@ -44,17 +44,15 @@ namespace RoomsApplication.Controllers
             return new EmptyResult();
         }
 
-        public ActionResult Update()
+        public ActionResult AddToRoom()
         {
             return View();
         }
 
-        [Route("Update/{id}")]
         [HttpPost]
-        public ActionResult Update(int id, HumanPostModel model)
+        public ActionResult AddToRoom(int humanId, int roomId)
         {
-            var updateModel = _mapper.Map<HumanModel>(model);
-            _humanService.Update(id, updateModel);
+            _humanService.AddToRoom(humanId, roomId);
 
             return new EmptyResult();
         }

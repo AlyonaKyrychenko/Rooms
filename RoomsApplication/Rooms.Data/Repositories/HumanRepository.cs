@@ -20,15 +20,15 @@ namespace Rooms.Data.Repositories
             }
         }
 
-        public void Update(int id, Human model)
+        public void Update(Human human)
         {
             using (var ctx = new RoomsContext())
             {
-                var human = ctx.Humans.First(x => x.Id == id);
+                var update = ctx.Humans.First(x => x.Id == human.Id);
 
-                human.Name = model.Name;
-                human.PhoneNumber = model.PhoneNumber;
-                human.RoomId = model.RoomId;
+                update.Name = human.Name;
+                update.PhoneNumber = human.PhoneNumber;
+                update.RoomId = human.RoomId;
 
                 ctx.SaveChanges();
             }
@@ -48,6 +48,14 @@ namespace Rooms.Data.Repositories
             using (var ctx = new RoomsContext())
             {
                 return ctx.Humans.AsNoTracking().ToList();
+            }
+        }
+
+        public Human GetById(int id)
+        {
+            using (var ctx = new RoomsContext())
+            {
+                return ctx.Humans.FirstOrDefault(x => x.Id == id);
             }
         }
     }

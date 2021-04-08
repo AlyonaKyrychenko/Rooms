@@ -36,10 +36,13 @@ namespace Rooms.Domain.Services
             _humansRepository.Create(entity);
         }
 
-        public void Update(int id, HumanModel model)
+        public void AddToRoom(int humanId, int roomId)
         {
-            var updateModel = _mapper.Map<Human>(model);
-            _humansRepository.Update(id, updateModel);
+            int id = humanId;
+            var human = _humansRepository.GetById(id);
+            human.RoomId = roomId;
+            
+            _humansRepository.Update(human);
         }
 
         public IReadOnlyCollection<HumanModel> GetHumanByRoomId(int id)
@@ -57,5 +60,6 @@ namespace Rooms.Domain.Services
 
             return result;
         }
+
     }
 }

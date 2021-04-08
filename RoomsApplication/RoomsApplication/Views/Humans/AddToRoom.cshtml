@@ -1,0 +1,26 @@
+﻿@model RoomsApplication.Models.HumansToRoomsViewModel
+
+@{
+    ViewBag.Title = "AddToRoom";
+}
+@using (Html.BeginForm("AddToRoom", "Humans", FormMethod.Post))
+{
+    <h1>This is Add Human to Room Page</h1>
+    <br />
+    <div>
+        @Html.LabelFor(x => x.HumanId)
+    </div>
+    <div>
+        @Html.TextBoxFor(x => x.HumanId)
+    </div>
+    <br />
+    <div>
+        @Html.LabelFor(x => x.RoomId)
+    </div>
+    <div>
+        @Html.TextBoxFor(x => x.RoomId)
+    </div>
+    <br />
+    <input type="submit" value="Отправить" />
+}
+
